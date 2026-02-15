@@ -1,0 +1,253 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "IDEAZS premium SaaS landing page (single-page, futuristic, high-converting)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create a single-page IDEAZS landing page on the main route with sections in the requested order and exact copy.",
+      "acceptanceCriteria": [
+        "Landing page renders all requested sections in the specified order on the main route.",
+        "All user-facing text is in English and matches the provided copy exactly for headlines, subheadlines, section titles, and CTA button labels.",
+        "Page is responsive and readable on mobile, tablet, and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main route UI as a single-page landing page and render sections in order: Hero, Problem Statement, How It Works, Features, Pricing, Final CTA. Use shadcn-ui primitives (e.g., Button/Card equivalents) where appropriate for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "create",
+          "description": "Add a composed LandingPage component that assembles all required sections in the correct order and provides section anchors/ids for on-page navigation. Use shadcn-ui components for consistent layout primitives where helpful; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/sections/index.ts",
+          "operation": "create",
+          "description": "Export the landing sections from a single barrel file to keep App/LandingPage wiring clean (no orphan sections)."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Confirm document metadata remains appropriate for the marketing landing page (title is IDEAZS) and ensure nothing prevents full-height layout/background rendering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a minimal futuristic premium theme with dark gradient background, glassmorphism cards, glow accents, and strong typographic hierarchy.",
+      "acceptanceCriteria": [
+        "Background uses a dark gradient (deep navy to black) across the page.",
+        "Cards (e.g., features/pricing) use glassmorphism styling (translucent surface + blur) with rounded corners and soft shadows.",
+        "Buttons/links/focus states use a consistent electric blue or violet glow accent.",
+        "Typography shows clear hierarchy (large hero headline, smaller supporting text, consistent section headings)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global styling entry point for the dark gradient page background, typography defaults, focus-visible styles, and shared utilities (glassmorphism surface, glow accent, subtle shadows). Ensure styles match the premium futuristic theme."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens/utilities as needed for consistent glow accents, glassmorphism helpers, and any required keyframes/animations used across the landing page (while keeping existing configuration intact)."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/GlassCard.tsx",
+          "operation": "create",
+          "description": "Create a reusable GlassCard wrapper implementing translucent + backdrop blur + rounded corners + soft shadow styling for features/pricing/how-it-works cards. Use shadcn-ui Card patterns if available in the project; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/GlowButton.tsx",
+          "operation": "create",
+          "description": "Create a button wrapper for primary/secondary CTA styles with consistent electric blue/violet glow hover/focus states. Prefer shadcn-ui Button as the base; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build the Hero section with exact headline/subheadline, two CTAs, and a subtle animated premium background effect.",
+      "acceptanceCriteria": [
+        "Hero displays the exact headline, subheadline, and both CTA buttons with the exact labels.",
+        "Hero background includes a subtle continuous animation (animated gradient and/or floating light particles) that does not obstruct text readability and is performant on mobile.",
+        "Primary and secondary CTAs are visually distinct, with hover/focus glow effects consistent with the accent color."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Implement the Hero section with the exact headline/subheadline and two CTAs (“Start Your Launch”, “See How It Works”), using GlowButton (and shadcn-ui Button as base) for consistent glow interactions; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/effects/HeroBackground.tsx",
+          "operation": "create",
+          "description": "Add a lightweight animated background effect for the hero (animated gradient and/or subtle floating light particles) designed to stay behind content and remain readable and performant on mobile."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/adjust keyframes and utility classes needed for the hero animated background (subtle, continuous) and ensure it integrates with the global dark gradient theme without reducing text contrast."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add the Problem Statement section with the exact title and concise marketing copy covering time, design, and technical barriers.",
+      "acceptanceCriteria": [
+        "Section displays the exact title provided.",
+        "Section includes concise marketing text covering time, design, and technical barriers (all three themes are present).",
+        "Spacing and typography match the overall premium theme and remain responsive."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/ProblemSection.tsx",
+          "operation": "create",
+          "description": "Implement the Problem Statement section with title “Ideas Don’t Fail. Launches Do.” and concise supporting copy explicitly covering time, design, and technical barriers. Use shared section layout and typography tokens from the theme."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/Section.tsx",
+          "operation": "create",
+          "description": "Create a reusable Section wrapper for consistent spacing, max-width, and section headings across the landing page (supports strong typographic hierarchy and responsive layout)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add a “How It Works” section with 3 desktop columns (stack on mobile), icons, and the three specified step labels.",
+      "acceptanceCriteria": [
+        "On desktop widths, the section shows 3 columns; on smaller screens it stacks cleanly.",
+        "Each step includes a clear icon and the exact step label.",
+        "Icons and cards follow glassmorphism styling and use the accent glow subtly on hover."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/HowItWorksSection.tsx",
+          "operation": "create",
+          "description": "Implement the How It Works section as a responsive 3-column grid (stacking on mobile) with icons and exact labels: “Describe Your Product”, “Choose Your Style”, “Launch Instantly”. Use GlassCard for glassmorphism and subtle hover glow."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/IconBadge.tsx",
+          "operation": "create",
+          "description": "Add a small reusable icon container/badge for section cards that supports accent glow styling on hover while keeping icons readable on dark backgrounds."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add a Features section with 5 modern feature cards, each with an icon and exact labels.",
+      "acceptanceCriteria": [
+        "All 5 feature cards render with the exact labels provided.",
+        "Each feature card includes an icon and consistent card styling (rounded, soft shadow, glass effect).",
+        "Hover states include subtle glow and do not cause layout shift."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/FeaturesSection.tsx",
+          "operation": "create",
+          "description": "Implement the Features section rendering five feature cards with icons and exact labels: “Auto-generated product page”, “Mobile optimized design”, “Built-in conversion layout”, “Shareable launch link”, “Analytics (Pro)”. Use GlassCard and IconBadge for consistent glass + glow styling."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/FeatureGrid.tsx",
+          "operation": "create",
+          "description": "Add a small layout component to render feature cards in a responsive grid with stable sizing to avoid hover-induced layout shift."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add a Pricing section with three tier cards (Free, Pro, Elite) and visually emphasize Pro with a subtle glow border/prominence.",
+      "acceptanceCriteria": [
+        "Pricing section displays three tiers: Free, Pro, Elite.",
+        "Pro tier is visually emphasized via a subtle glow border and/or prominence without being distracting.",
+        "Cards remain readable on dark gradient background and are responsive (stack on mobile)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/PricingSection.tsx",
+          "operation": "create",
+          "description": "Implement the Pricing section with three tier cards (Free, Pro, Elite). Use GlassCard styling and add a subtle accent glow border/elevation on the Pro plan to highlight it while maintaining the minimal premium theme."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/PricingCard.tsx",
+          "operation": "create",
+          "description": "Create a dedicated PricingCard component to ensure consistent spacing, typography hierarchy, and responsive behavior across tiers; include a variant for the emphasized Pro styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add the Final CTA section with the exact headline and CTA button label, separated clearly from Pricing.",
+      "acceptanceCriteria": [
+        "Final CTA displays the exact headline and button label.",
+        "CTA button includes hover/focus glow effects consistent with the chosen accent.",
+        "Section has clear visual separation from Pricing and maintains premium spacing."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/sections/FinalCTASection.tsx",
+          "operation": "create",
+          "description": "Implement the Final CTA section with headline “Your Idea Deserves to Be Seen.” and CTA button “Launch with IDEAZS Now”, using GlowButton for consistent glow focus/hover. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/ui/DividerGlow.tsx",
+          "operation": "create",
+          "description": "Add a subtle divider/separator element (e.g., soft gradient line or spacing helper) to clearly separate Pricing from the Final CTA while matching the futuristic theme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Implement smooth fade-in scroll animations for major sections and subtle hover glow effects for interactive elements without performance issues.",
+      "acceptanceCriteria": [
+        "Each major section fades/slides in as it enters the viewport (no animation spam on tiny elements).",
+        "Buttons and cards have subtle glow/brightness changes on hover and visible focus states for keyboard navigation.",
+        "Animations remain performant (no noticeable jank on typical devices) and preserve readability."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useScrollReveal.ts",
+          "operation": "create",
+          "description": "Create a small hook using IntersectionObserver to apply reveal-on-enter animations to major sections only (Hero/Problem/How It Works/Features/Pricing/Final CTA) with sensible thresholds and reduced-motion support."
+        },
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Wire scroll reveal behavior to each major section container (apply reveal classes only at section level)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add reveal animation classes (fade/slide), hover-glow utility classes for cards/links, and accessible focus-visible styling aligned with the electric blue/violet accent."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Wire Hero CTAs to smooth on-page navigation: “See How It Works” to How It Works; primary CTA and final CTA to one consistent target.",
+      "acceptanceCriteria": [
+        "Clicking “See How It Works” smoothly scrolls to the How It Works section.",
+        "Clicking “Start Your Launch” and “Launch with IDEAZS Now” smoothly scrolls to the chosen target section (Pricing or Final CTA) consistently.",
+        "Scrolling behavior works on mobile and does not require a page reload."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/landing/LandingPage.tsx",
+          "operation": "modify",
+          "description": "Add stable section ids/refs for How It Works and the chosen conversion target (Pricing or Final CTA) and implement smooth scrolling helpers (e.g., scrollIntoView with behavior: 'smooth')."
+        },
+        {
+          "path": "frontend/src/components/landing/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Wire “See How It Works” to scroll to the How It Works section and wire “Start Your Launch” to the chosen consistent target section using the shared smooth-scroll handler. Use GlowButton/shadcn-ui Button patterns for interaction; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/landing/sections/FinalCTASection.tsx",
+          "operation": "modify",
+          "description": "Wire “Launch with IDEAZS Now” to scroll to the same chosen target section as “Start Your Launch” (consistent behavior), using the shared smooth-scroll handler and GlowButton styling. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

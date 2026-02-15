@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a modern premium SaaS startup landing page website for “IDEAZS” with a minimal futuristic dark-gradient design, glassmorphism cards, and smooth scroll/hover animations.",
+  "architectural_notes": [
+    "Landing page aesthetic: dark gradient (deep navy to black), bold typography with strong hierarchy, lots of whitespace, rounded corners, soft shadows, glassmorphism cards.",
+    "UI motion: smooth fade-in on scroll and subtle hover glow; optional animated gradient background or floating light particles."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-marketing-landing-page-for-ideazs-with-the-following-sections-in-order-hero-problem-statement-how-it-works-features-pricing-final-cta",
+      "title": "Create a single-page marketing landing page for “IDEAZS” with the following sections in order: Hero, Problem Statement, How It Works, Features, Pricing, Final CTA.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-overall-visual-theme-minimal-futuristic-premium-saas-look-with-a-dark-gradient-background-deep-navy-to-black-strong-typographic-hierarchy-ample-whitespace-rounded-corners-soft-shadows-and-glassmorphism-cards-use-an-electric-blue-or-violet-glow-accent-consistently-for-interactive-elements-and-highlights",
+      "title": "Implement the overall visual theme: minimal, futuristic, premium SaaS look with a dark gradient background (deep navy to black), strong typographic hierarchy, ample whitespace, rounded corners, soft shadows, and glassmorphism cards; use an electric blue or violet glow accent consistently for interactive elements and highlights.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-with-headline-launch-your-idea-sell-in-minutes-subheadline-ideazs-turns-your-product-idea-into-a-stunning-ready-to-share-launch-page-instantly-primary-cta-button-start-your-launch-secondary-button-see-how-it-works-include-a-subtle-animated-gradient-background-or-floating-light-particle-effect-behind-around-the-hero-for-a-premium-feel",
+      "title": "Build the Hero section with: headline “Launch Your Idea. Sell in Minutes.”; subheadline “IDEAZS turns your product idea into a stunning, ready-to-share launch page — instantly.”; primary CTA button “Start Your Launch”; secondary button “See How It Works”. Include a subtle animated gradient background or floating light particle effect behind/around the hero for a premium feel.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-problem-statement-section-with-title-ideas-don-t-fail-launches-do-and-short-marketing-copy-describing-how-people-struggle-to-launch-products-due-to-time-design-and-technical-barriers",
+      "title": "Add the Problem Statement section with title “Ideas Don’t Fail. Launches Do.” and short marketing copy describing how people struggle to launch products due to time, design, and technical barriers.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-how-it-works-section-laid-out-as-3-columns-on-desktop-stacked-on-mobile-with-icons-and-the-following-steps-describe-your-product-choose-your-style-launch-instantly",
+      "title": "Add a “How It Works” section laid out as 3 columns on desktop (stacked on mobile) with icons and the following steps: “Describe Your Product”, “Choose Your Style”, “Launch Instantly”.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-features-section-using-modern-feature-cards-with-icons-for-auto-generated-product-page-mobile-optimized-design-built-in-conversion-layout-shareable-launch-link-analytics-pro",
+      "title": "Add a Features section using modern feature cards with icons for: “Auto-generated product page”, “Mobile optimized design”, “Built-in conversion layout”, “Shareable launch link”, “Analytics (Pro)”.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-pricing-section-with-3-clean-tier-cards-free-pro-elite-visually-highlight-the-pro-plan-with-a-subtle-glow-border-and-or-elevated-emphasis-while-staying-consistent-with-the-minimal-premium-theme",
+      "title": "Add a Pricing section with 3 clean tier cards: Free, Pro, Elite. Visually highlight the Pro plan with a subtle glow border and/or elevated emphasis while staying consistent with the minimal premium theme.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-final-cta-section-with-big-bold-text-your-idea-deserves-to-be-seen-and-a-cta-button-labeled-launch-with-ideazs-now",
+      "title": "Add a Final CTA section with big bold text “Your Idea Deserves to Be Seen.” and a CTA button labeled “Launch with IDEAZS Now”.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-fade-in-scroll-animations-for-major-sections-and-subtle-hover-glow-effects-for-interactive-elements-buttons-cards-links-while-keeping-transitions-smooth-and-high-end",
+      "title": "Implement smooth fade-in scroll animations for major sections and subtle hover glow effects for interactive elements (buttons, cards, links) while keeping transitions smooth and high-end.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-hero-ctas-to-sensible-on-page-navigation-see-how-it-works-scrolls-to-the-how-it-works-section-start-your-launch-and-launch-with-ideazs-now-scroll-to-pricing-or-the-final-cta-area-choose-one-consistent-target-and-implement-smooth-scrolling",
+      "title": "Wire the Hero CTAs to sensible on-page navigation: “See How It Works” scrolls to the How It Works section; “Start Your Launch” and “Launch with IDEAZS Now” scroll to Pricing or the final CTA area (choose one consistent target and implement smooth scrolling).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create the IDEAZS high-converting SaaS landing page with hero, problem statement, how-it-works, features, pricing tiers, and final CTA sections using dark gradient + electric blue/violet accent styling and subtle animations.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "IDEAZS",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

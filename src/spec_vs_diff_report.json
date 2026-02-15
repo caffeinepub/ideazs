@@ -1,0 +1,81 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T17:42:27.916Z",
+  "summary": "Diff adds a new single-page landing page composed of Hero, Problem, How It Works, Features, Pricing, Final CTA sections on the main App route, with on-page smooth scrolling from Hero CTAs. Several visual/animation requirements (global dark gradient background, glassmorphism/glow CSS implementation, and scroll reveal behavior) are referenced via class names/hooks but are not evidenced in the provided diff summary, so their completion cannot be confirmed from this truncated view. Additional unrequested elements (Footer with external links and an Internet Identity actor hook) were added.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "Implement the overall visual theme: dark gradient background (deep navy to black), glassmorphism cards, consistent electric blue/violet glow accents, and strong typographic hierarchy.",
+      "reason": "Components apply class names like `glass`, `glass-strong`, `glow-primary`, `hover-glow`, but the diff summary does not include any global styles/theme configuration showing a deep navy-to-black gradient background or defining these glass/glow classes. Without CSS/theme files in the visible diff, the required theme cannot be verified as implemented.",
+      "evidence": [
+        "frontend/src/components/landing/sections/HeroSection.tsx",
+        "frontend/src/components/landing/sections/ProblemSection.tsx",
+        "frontend/src/components/landing/ui/GlassCard.tsx",
+        "frontend/src/components/landing/ui/GlowButton.tsx"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "requirement": "Implement smooth fade-in scroll animations for major sections and subtle hover glow effects for interactive elements (buttons, cards, links), including visible focus states.",
+      "reason": "`useScrollReveal` is invoked and sections use a `reveal` class, but the diff summary does not include the `useScrollReveal` hook implementation nor any CSS/keyframes that would actually perform fade/slide-in animations. Hover glow is implied via class names, but their styles are not shown, and explicit keyboard focus styling beyond existing button variants is not evidenced.",
+      "evidence": [
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/hooks/useScrollReveal (referenced, not shown)",
+        "frontend/src/components/landing/ui/GlowButton.tsx",
+        "frontend/src/components/landing/ui/GlassCard.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Footer section with external social links and a `caffeine.ai` referral link (\"Built with ... using caffeine.ai\").",
+      "reason": "BuildRequest does not request a footer or any external promotional/referral links; adding these is outside the specified landing page sections and copy constraints.",
+      "evidence": [
+        "frontend/src/components/landing/sections/Footer.tsx",
+        "frontend/src/components/landing/LandingPage.tsx"
+      ]
+    },
+    {
+      "description": "Internet Identity/actor wiring via a `useActor` hook using `useInternetIdentity` and React Query.",
+      "reason": "BuildRequest explicitly lists authentication as a non-goal and requests a marketing/landing page only; adding identity/actor plumbing is not requested for this task.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts"
+      ]
+    }
+  ],
+  "confidence": 0.66,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/landing/LandingPage.tsx",
+    "frontend/src/components/landing/effects/HeroBackground.tsx",
+    "frontend/src/components/landing/sections/FeaturesSection.tsx",
+    "frontend/src/components/landing/sections/FinalCTASection.tsx",
+    "frontend/src/components/landing/sections/Footer.tsx",
+    "frontend/src/components/landing/sections/HeroSection.tsx",
+    "frontend/src/components/landing/sections/HowItWorksSection.tsx",
+    "frontend/src/components/landing/sections/PricingSection.tsx",
+    "frontend/src/components/landing/sections/ProblemSection.tsx",
+    "frontend/src/components/landing/sections/index.ts",
+    "frontend/src/components/landing/ui/DividerGlow.tsx",
+    "frontend/src/components/landing/ui/FeatureGrid.tsx",
+    "frontend/src/components/landing/ui/GlassCard.tsx",
+    "frontend/src/components/landing/ui/GlowButton.tsx",
+    "frontend/src/components/landing/ui/IconBadge.tsx",
+    "frontend/src/components/landing/ui/PricingCard.tsx",
+    "frontend/src/components/landing/ui/Section.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useScrollReveal.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-marketing-landing-page-for-ideazs-with-the-following-sections-in-order-hero-problem-statement-how-it-works-features-pricing-final-cta",
+      "featureTitle": "Create a single-page marketing landing page for “IDEAZS” with the following sections in order: Hero, Problem Statement, How It Works, Features, Pricing, Final CTA.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/components/landing/sections/index.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-overall-visual-theme-minimal-futuristic-premium-saas-look-with-a-dark-gradient-background-deep-navy-to-black-strong-typographic-hierarchy-ample-whitespace-rounded-corners-soft-shadows-and-glassmorphism-cards-use-an-electric-blue-or-violet-glow-accent-consistently-for-interactive-elements-and-highlights",
+      "featureTitle": "Implement the overall visual theme: minimal, futuristic, premium SaaS look with a dark gradient background (deep navy to black), strong typographic hierarchy, ample whitespace, rounded corners, soft shadows, and glassmorphism cards; use an electric blue or violet glow accent consistently for interactive elements and highlights.",
+      "files": [
+        "frontend/src/components/landing/ui/GlassCard.tsx",
+        "frontend/src/components/landing/ui/GlowButton.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-build-the-hero-section-with-headline-launch-your-idea-sell-in-minutes-subheadline-ideazs-turns-your-product-idea-into-a-stunning-ready-to-share-launch-page-instantly-primary-cta-button-start-your-launch-secondary-button-see-how-it-works-include-a-subtle-animated-gradient-background-or-floating-light-particle-effect-behind-around-the-hero-for-a-premium-feel",
+      "featureTitle": "Build the Hero section with: headline “Launch Your Idea. Sell in Minutes.”; subheadline “IDEAZS turns your product idea into a stunning, ready-to-share launch page — instantly.”; primary CTA button “Start Your Launch”; secondary button “See How It Works”. Include a subtle animated gradient background or floating light particle effect behind/around the hero for a premium feel.",
+      "files": [
+        "frontend/src/components/landing/effects/HeroBackground.tsx",
+        "frontend/src/components/landing/sections/HeroSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-problem-statement-section-with-title-ideas-don-t-fail-launches-do-and-short-marketing-copy-describing-how-people-struggle-to-launch-products-due-to-time-design-and-technical-barriers",
+      "featureTitle": "Add the Problem Statement section with title “Ideas Don’t Fail. Launches Do.” and short marketing copy describing how people struggle to launch products due to time, design, and technical barriers.",
+      "files": [
+        "frontend/src/components/landing/sections/ProblemSection.tsx",
+        "frontend/src/components/landing/ui/Section.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-how-it-works-section-laid-out-as-3-columns-on-desktop-stacked-on-mobile-with-icons-and-the-following-steps-describe-your-product-choose-your-style-launch-instantly",
+      "featureTitle": "Add a “How It Works” section laid out as 3 columns on desktop (stacked on mobile) with icons and the following steps: “Describe Your Product”, “Choose Your Style”, “Launch Instantly”.",
+      "files": [
+        "frontend/src/components/landing/sections/HowItWorksSection.tsx",
+        "frontend/src/components/landing/ui/IconBadge.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-features-section-using-modern-feature-cards-with-icons-for-auto-generated-product-page-mobile-optimized-design-built-in-conversion-layout-shareable-launch-link-analytics-pro",
+      "featureTitle": "Add a Features section using modern feature cards with icons for: “Auto-generated product page”, “Mobile optimized design”, “Built-in conversion layout”, “Shareable launch link”, “Analytics (Pro)”.",
+      "files": [
+        "frontend/src/components/landing/sections/FeaturesSection.tsx",
+        "frontend/src/components/landing/ui/FeatureGrid.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-pricing-section-with-3-clean-tier-cards-free-pro-elite-visually-highlight-the-pro-plan-with-a-subtle-glow-border-and-or-elevated-emphasis-while-staying-consistent-with-the-minimal-premium-theme",
+      "featureTitle": "Add a Pricing section with 3 clean tier cards: Free, Pro, Elite. Visually highlight the Pro plan with a subtle glow border and/or elevated emphasis while staying consistent with the minimal premium theme.",
+      "files": [
+        "frontend/src/components/landing/sections/PricingSection.tsx",
+        "frontend/src/components/landing/ui/PricingCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-final-cta-section-with-big-bold-text-your-idea-deserves-to-be-seen-and-a-cta-button-labeled-launch-with-ideazs-now",
+      "featureTitle": "Add a Final CTA section with big bold text “Your Idea Deserves to Be Seen.” and a CTA button labeled “Launch with IDEAZS Now”.",
+      "files": [
+        "frontend/src/components/landing/sections/FinalCTASection.tsx",
+        "frontend/src/components/landing/ui/DividerGlow.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-smooth-fade-in-scroll-animations-for-major-sections-and-subtle-hover-glow-effects-for-interactive-elements-buttons-cards-links-while-keeping-transitions-smooth-and-high-end",
+      "featureTitle": "Implement smooth fade-in scroll animations for major sections and subtle hover glow effects for interactive elements (buttons, cards, links) while keeping transitions smooth and high-end.",
+      "files": [
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/hooks/useScrollReveal.ts",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-wire-the-hero-ctas-to-sensible-on-page-navigation-see-how-it-works-scrolls-to-the-how-it-works-section-start-your-launch-and-launch-with-ideazs-now-scroll-to-pricing-or-the-final-cta-area-choose-one-consistent-target-and-implement-smooth-scrolling",
+      "featureTitle": "Wire the Hero CTAs to sensible on-page navigation: “See How It Works” scrolls to the How It Works section; “Start Your Launch” and “Launch with IDEAZS Now” scroll to Pricing or the final CTA area (choose one consistent target and implement smooth scrolling).",
+      "files": [
+        "frontend/src/components/landing/LandingPage.tsx",
+        "frontend/src/components/landing/sections/FinalCTASection.tsx",
+        "frontend/src/components/landing/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "kind": "build_request",
+  "title": "IDEAZS premium SaaS landing page (modern, futuristic, high-converting)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page marketing landing page for “IDEAZS” with the following sections in order: Hero, Problem Statement, How It Works, Features, Pricing, Final CTA.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a modern premium SaaS startup website called “IDEAZS”.\n\nHero Section...\nNext Section: Problem Statement...\nHow It Works Section...\nFeatures Section...\nPricing Section...\nFinal CTA Section..."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders all requested sections in the specified order on the main route.",
+        "All user-facing text is in English and matches the provided copy exactly for headlines, subheadlines, section titles, and CTA button labels.",
+        "Page is responsive and readable on mobile, tablet, and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the overall visual theme: minimal, futuristic, premium SaaS look with a dark gradient background (deep navy to black), strong typographic hierarchy, ample whitespace, rounded corners, soft shadows, and glassmorphism cards; use an electric blue or violet glow accent consistently for interactive elements and highlights.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Style: Minimal, futuristic, high-converting landing page.\nDark gradient background (deep navy to black).\nClean bold typography with strong hierarchy.\nAccent color: electric blue or violet glow.\nLots of white space and smooth spacing.\nRounded corners, soft shadows, glassmorphism cards."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background uses a dark gradient (deep navy to black) across the page.",
+        "Cards (e.g., features/pricing) use glassmorphism styling (translucent surface + blur) with rounded corners and soft shadows.",
+        "Buttons/links/focus states use a consistent electric blue or violet glow accent.",
+        "Typography shows clear hierarchy (large hero headline, smaller supporting text, consistent section headings)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build the Hero section with: headline “Launch Your Idea. Sell in Minutes.”; subheadline “IDEAZS turns your product idea into a stunning, ready-to-share launch page — instantly.”; primary CTA button “Start Your Launch”; secondary button “See How It Works”. Include a subtle animated gradient background or floating light particle effect behind/around the hero for a premium feel.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Hero Section:\nLarge bold headline:\n“Launch Your Idea. Sell in Minutes.”\n\nSubheadline:\n“IDEAZS turns your product idea into a stunning, ready-to-share launch page — instantly.”\n\nPrimary CTA button:\n“Start Your Launch”\n\nSecondary button:\n“See How It Works”\n\nAdd subtle animated gradient background or floating light particles for a premium feel."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero displays the exact headline, subheadline, and both CTA buttons with the exact labels.",
+        "Hero background includes a subtle continuous animation (animated gradient and/or floating light particles) that does not obstruct text readability and is performant on mobile.",
+        "Primary and secondary CTAs are visually distinct, with hover/focus glow effects consistent with the accent color."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add the Problem Statement section with title “Ideas Don’t Fail. Launches Do.” and short marketing copy describing how people struggle to launch products due to time, design, and technical barriers.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Next Section: Problem Statement\nTitle: “Ideas Don’t Fail. Launches Do.”\nShort marketing text explaining how people struggle to launch products due to time, design, and technical barriers."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Section displays the exact title provided.",
+        "Section includes concise marketing text covering time, design, and technical barriers (all three themes are present).",
+        "Spacing and typography match the overall premium theme and remain responsive."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a “How It Works” section laid out as 3 columns on desktop (stacked on mobile) with icons and the following steps: “Describe Your Product”, “Choose Your Style”, “Launch Instantly”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "How It Works Section (3 columns with icons):\n\nDescribe Your Product\n\nChoose Your Style\n\nLaunch Instantly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On desktop widths, the section shows 3 columns; on smaller screens it stacks cleanly.",
+        "Each step includes a clear icon and the exact step label.",
+        "Icons and cards follow glassmorphism styling and use the accent glow subtly on hover."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a Features section using modern feature cards with icons for: “Auto-generated product page”, “Mobile optimized design”, “Built-in conversion layout”, “Shareable launch link”, “Analytics (Pro)”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Features Section:\nModern feature cards with icons:\n\nAuto-generated product page\n\nMobile optimized design\n\nBuilt-in conversion layout\n\nShareable launch link\n\nAnalytics (Pro)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 5 feature cards render with the exact labels provided.",
+        "Each feature card includes an icon and consistent card styling (rounded, soft shadow, glass effect).",
+        "Hover states include subtle glow and do not cause layout shift."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a Pricing section with 3 clean tier cards: Free, Pro, Elite. Visually highlight the Pro plan with a subtle glow border and/or elevated emphasis while staying consistent with the minimal premium theme.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Pricing Section:\nClean 3-tier pricing cards: Free, Pro, Elite\nHighlight Pro plan with subtle glow border."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Pricing section displays three tiers: Free, Pro, Elite.",
+        "Pro tier is visually emphasized via a subtle glow border and/or prominence without being distracting.",
+        "Cards remain readable on dark gradient background and are responsive (stack on mobile)."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add a Final CTA section with big bold text “Your Idea Deserves to Be Seen.” and a CTA button labeled “Launch with IDEAZS Now”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Final CTA Section:\nBig bold text:\n“Your Idea Deserves to Be Seen.”\nButton: “Launch with IDEAZS Now”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Final CTA displays the exact headline and button label.",
+        "CTA button includes hover/focus glow effects consistent with the chosen accent.",
+        "Section has clear visual separation from Pricing and maintains premium spacing."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Implement smooth fade-in scroll animations for major sections and subtle hover glow effects for interactive elements (buttons, cards, links) while keeping transitions smooth and high-end.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smooth fade-in scroll animations and subtle hover glow effects.\n...\nSmooth transitions. High-end startup feel."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each major section fades/slides in as it enters the viewport (no animation spam on tiny elements).",
+        "Buttons and cards have subtle glow/brightness changes on hover and visible focus states for keyboard navigation.",
+        "Animations remain performant (no noticeable jank on typical devices) and preserve readability."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Wire the Hero CTAs to sensible on-page navigation: “See How It Works” scrolls to the How It Works section; “Start Your Launch” and “Launch with IDEAZS Now” scroll to Pricing or the final CTA area (choose one consistent target and implement smooth scrolling).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Primary CTA button:\n“Start Your Launch”\n\nSecondary button:\n“See How It Works”\n...\nButton: “Launch with IDEAZS Now”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking “See How It Works” smoothly scrolls to the How It Works section.",
+        "Clicking “Start Your Launch” and “Launch with IDEAZS Now” smoothly scrolls to the chosen target section (Pricing or Final CTA) consistently.",
+        "Scrolling behavior works on mobile and does not require a page reload."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend code must not modify any files under the immutable paths listed in SYSTEM_CONTEXT (compose existing UI components instead of editing them).",
+    "Do not introduce unsupported technologies (no Next.js, no external databases, no third-party auth beyond Internet Identity, no WebSockets)."
+  ],
+  "nonGoals": [
+    "Building the actual IDEAZS product flow that generates launch pages (this request is for a marketing/landing page only).",
+    "Implementing user authentication, payments, analytics tracking, or dashboards beyond static marketing copy."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

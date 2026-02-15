@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Deep navy to black gradient theme */
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        
+        /* Electric blue/violet accent */
+        --primary: 0.65 0.25 265;
+        --primary-foreground: 0.985 0 0;
+        
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        
+        --muted: 0.269 0.02 265;
+        --muted-foreground: 0.708 0 0;
+        
+        --accent: 0.60 0.28 280;
+        --accent-foreground: 0.985 0 0;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.65 0.25 265;
+        
+        --card: 0.205 0.02 265;
+        --card-foreground: 0.985 0 0;
+        
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        background: linear-gradient(180deg, oklch(0.18 0.04 265) 0%, oklch(0.12 0.02 265) 50%, oklch(0.08 0 0) 100%);
+        background-attachment: fixed;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+}
+
+@layer utilities {
+    /* Glassmorphism utilities */
+    .glass {
+        background: oklch(0.22 0.02 265 / 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid oklch(1 0 0 / 0.1);
+    }
+    
+    .glass-strong {
+        background: oklch(0.25 0.02 265 / 0.6);
+        backdrop-filter: blur(16px);
+        border: 1px solid oklch(1 0 0 / 0.15);
+    }
+    
+    /* Glow effects */
+    .glow-primary {
+        box-shadow: 0 0 20px oklch(0.65 0.25 265 / 0.3),
+                    0 0 40px oklch(0.65 0.25 265 / 0.15);
+    }
+    
+    .glow-accent {
+        box-shadow: 0 0 20px oklch(0.60 0.28 280 / 0.3),
+                    0 0 40px oklch(0.60 0.28 280 / 0.15);
+    }
+    
+    .hover-glow {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .hover-glow:hover {
+        box-shadow: 0 0 30px oklch(0.65 0.25 265 / 0.4),
+                    0 0 60px oklch(0.65 0.25 265 / 0.2);
+        transform: translateY(-2px);
+    }
+    
+    /* Scroll reveal animations */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        .reveal {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+    }
+    
+    /* Animated gradient background */
+    @keyframes gradient-shift {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+    }
+    
+    .animated-gradient {
+        background: linear-gradient(
+            135deg,
+            oklch(0.18 0.04 265),
+            oklch(0.20 0.06 280),
+            oklch(0.18 0.04 265)
+        );
+        background-size: 200% 200%;
+        animation: gradient-shift 15s ease infinite;
+    }
+    
+    /* Floating particles animation */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0) translateX(0);
+            opacity: 0.3;
+        }
+        25% {
+            transform: translateY(-20px) translateX(10px);
+            opacity: 0.6;
+        }
+        50% {
+            transform: translateY(-40px) translateX(-10px);
+            opacity: 0.3;
+        }
+        75% {
+            transform: translateY(-20px) translateX(10px);
+            opacity: 0.6;
+        }
+    }
+    
+    .particle {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, oklch(0.65 0.25 265 / 0.6), transparent);
+        pointer-events: none;
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    /* Focus visible styles */
+    *:focus-visible {
+        outline: 2px solid oklch(0.65 0.25 265);
+        outline-offset: 2px;
+    }
+}
